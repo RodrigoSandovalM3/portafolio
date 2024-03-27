@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/base.css">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <div class="varTop">
+        <img class="imagenLogo" src="IMG/Logo.svg">
+    </div>
+    <div class="cajaNav">
+    <div>
+        <a href="">Home</a> 
+    </div>
+    <div>
+        <a href="">Contacto</a>
+    </div>
+    <div>
+        traslate
+    </div>
+    <div>
+        <button class="switchTema" id="switchTema">
+            <span><i class="bi bi-brightness-high-fill"></i></span>
+            <span><i class="bi bi-moon-fill"></i></i></i></span>
+        </button>
+    </div>
+    
+    </div>
+</header>
+<body>
+    <div class="divPapatulio">
+        <div class="cajaPadre">
+            <div class="cajatexto">
+                <div class="inputDiv">
+                    Ingresa el texto aqui
+                </div>
+                <div style="height: 80%; min-height: 440px; display: flex; justify-content: center;">
+                    <div class="editable-div" contenteditable="true">
+                        <div class="padEdit">
+
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                    <div class="warning">
+                    <p><strong><i style="margin-right: 10px; color: red;" class="bi bi-exclamation-circle-fill"></i>Solo letras minusculas sin acentos</strong></p>
+
+                    </div>
+                    <div class="cajaBotones">
+                        <button onclick="encriptarTexto()" class="botonEncriptar"><div>Encriptar</div></button>
+                        <button onclick="desencriptarTexto()" class="botonDesencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="mensajeEncriptado" class="cajaEncriptador" contenteditable="false">
+                <img class="muñeco" src="IMG/Muñeco.svg" alt="">
+                <div class="diseñoTexto">
+                    <p><strong>Ningún mensaje fue encontrado</strong></p>
+                    <p class="diseñoParrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+<script src="JavaScrip/encriptador.js"></script>
+</html>

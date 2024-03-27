@@ -1,0 +1,364 @@
+body {
+    background-color: #F3F5FC;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    min-width: 480px;
+    min-height: 770px;
+    &.dark {
+        background: #041a41;
+    }
+}
+
+div{
+    
+    body.dark & {
+        color: #ffffffd4;
+    }
+}
+
+a {
+    body.dark & {
+        color: #ffffff69;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+/* #miHeader {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    transition: height 0.3s ease; 
+    overflow: hidden;
+    height: 0; 
+} */
+
+/* #miHeader.abierto {
+    height: 200px; 
+} */
+
+.divPapatulio {
+    width: 100%;
+    min-width: 500px;
+    height: 90%; 
+    min-height: 770px;
+    display: flex; 
+    flex-direction: column-reverse; 
+    justify-content: center;
+    align-items: center;
+}
+
+.varTop {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 400;
+}
+
+.cajaNav {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+.imagenLogo {
+    object-fit: cover;
+    max-width: 100px;
+    height: auto;
+}
+.cajaPadre {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-content: stretch;
+    justify-items: center;
+}
+
+.cajatexto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cajaEncriptador {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    body.dark & {
+        background-color: #0A3871;
+    }
+}
+
+.cajaEncriptador2 {
+    max-width: 350px;
+    min-width: 350px;
+    max-height: 740px;
+    /* min-height: 100%; */
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: auto;
+    padding: 25px;
+    
+    body.dark & {
+        background-color: #0A3871;
+    }
+}
+
+.inputDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+
+
+}
+
+.diseñoTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0%;
+}
+
+.diseñoParrafo{
+    margin: -20px;
+    opacity: 50%;
+}
+
+.warning {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    margin: -20px;                
+    margin-left: -340px;
+}
+
+.cajaBotones {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.botonEncriptar {
+    width: 300px;
+    min-height: 6vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        background-color: #2c3e50;
+    }
+
+    
+    &:active {
+        transform: translateY(2px);
+        box-shadow: none;
+    }
+
+    body.dark &{
+        background-color: #0A3871;
+    }
+}
+
+
+
+.botonDesencriptar {
+    width: 300px;
+    min-height: 6vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; 
+
+    &:hover {
+        background-color: #2c3e50;
+    }
+
+    
+    &:active {
+        transform: translateY(2px);
+        box-shadow: none;
+    }
+    body.dark &{
+        background-color: #0A3871;
+    }
+}
+
+
+.editable-div {
+    border: 1px solid #ccc;
+    margin: 10px;
+    width: 800px;
+    min-height: 40px;
+    cursor: text;
+    border-radius: 10px;
+    overflow: auto;
+    max-height: 700px;
+
+    body.dark & {
+        background-color: #0A3871;
+        border: 1px solid #d1d1d113;
+    }
+}
+
+
+
+.padEdit {
+    padding: 15px;
+}
+
+.switchTema {
+    background-color: orange;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        background: #F1F1F1;
+        top: 0;
+        right: 0;
+        left: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+
+    }
+    &.active {
+        background-color: #343d5b;
+        color: #000;
+        &::after {
+            left: 0;
+            right: unset;
+
+        }
+    }
+
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: none;
+        color: #fff;
+    }
+}
+
+/* -------------------------------------MEDIA QUERIES------------------------------------- */
+
+
+/* --------------480px----------------- */
+
+@media screen and (max-width: 900px) {
+    .cajaPadre {
+        width: 400px;
+        height: 100%;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    .cajaEncriptador {
+        width: 100%;
+        height: 20%;
+        background-color: #fff;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+    .cajaEncriptador2 {
+        width: 350px;
+        height: 100px;
+        background-color: #fff;
+        border-radius: 30px;
+        overflow: auto;
+        
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .muñeco {
+        width: 0;
+        height: 0;
+        
+    }
+    .editable-div {
+        width: 300px;
+        height: 80%;
+        overflow: auto;
+        max-height: 500px;
+    }
+    
+    .varTop {
+        margin-right: 0;
+    }
+    .divPapatulio {
+        height: 85%;
+    }
+    .warning{
+        margin-left: 0px;
+    }
+
+    .cajaBotones {
+        width: 300px; 
+    }
+    
+    .inputDiv {
+        font-size: 25px;
+    }
+}
